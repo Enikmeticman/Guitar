@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E73EBF1D-5453-4326-9D81-97EECB4CA9D8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GuitarMass_FRM</RootNamespace>
+    <AssemblyName>GuitarMass</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppData.cs" />
+    <Compile Include="Deffines.cs" />
+    <Compile Include="DirivedClasses\DoubleBufferPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DirivedClasses\VisualFret.cs" />
+    <Compile Include="DirivedClasses\VisualFretBoard.cs" />
+    <Compile Include="DirivedClasses\VisualGuitarString.cs" />
+    <Compile Include="DynamicControls.cs" />
+    <Compile Include="Forms\GuitareMass_FRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GuitareMass_FRM.Designer.cs">
+      <DependentUpon>GuitareMass_FRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GuitarSetup_FRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GuitarSetup_FRM.Designer.cs">
+      <DependentUpon>GuitarSetup_FRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loader.cs" />
+    <Compile Include="Processor.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\ScaleGeneration_FRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ScaleGeneration_FRM.Designer.cs">
+      <DependentUpon>ScaleGeneration_FRM.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\GuitareMass_FRM.resx">
+      <DependentUpon>GuitareMass_FRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GuitarSetup_FRM.resx">
+      <DependentUpon>GuitarSetup_FRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Forms\ScaleGeneration_FRM.resx">
+      <DependentUpon>ScaleGeneration_FRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\String.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\A#.png" />
+    <EmbeddedResource Include="Resources\A.png" />
+    <EmbeddedResource Include="Resources\B.png" />
+    <EmbeddedResource Include="Resources\C.png" />
+    <EmbeddedResource Include="Resources\D#.png" />
+    <EmbeddedResource Include="Resources\D.png" />
+    <EmbeddedResource Include="Resources\E.png" />
+    <EmbeddedResource Include="Resources\F#.png" />
+    <EmbeddedResource Include="Resources\F.png" />
+    <EmbeddedResource Include="Resources\G#.png" />
+    <EmbeddedResource Include="Resources\G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\C#.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\GuitareMassIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GuitareMassIcon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\FretBoard%28nek%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChordPannel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Base\Base.csproj">
+      <Project>{dda3d6a2-22c0-4893-a43a-7f600fdc38b8}</Project>
+      <Name>Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SCL_GN\GTR_Logic.csproj">
+      <Project>{1154c437-7c06-4354-84f1-e6d7dda28cc6}</Project>
+      <Name>GTR_Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
